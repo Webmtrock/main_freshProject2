@@ -222,14 +222,15 @@
                                                 <h4 class="card-title card-title-dash">Top Store's</h4>
                                             </div>
                                         </div>
+                                        
                                         <div class="mt-3">
                                             @foreach($top_stores as $top_store)
                                                 <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                                     <div class="d-flex">
-                                                        <img class="img-sm rounded-10" src="{{ url(config('app.profile_image')).'/'.$top_store->vendor->profile_image ?? '' }} " alt="profile">
+                                                        <img class="img-sm rounded-10" src="{{ optional($top_store->vendor)->profile_image ? url(config('app.profile_image')).'/'.$top_store->vendor->profile_image : '' }}" alt="profile">
                                                         <div class="wrapper ms-3">
-                                                        <p class="ms-1 mb-1 fw-bold">{{ $top_store->vendor->vendor->store_name }}</p>
-                                                        <small class="text-muted mb-0">{{ $top_store->vendor->vendor->location }}</small>
+                                                            <p class="ms-1 mb-1 fw-bold">{{ optional($top_store->vendor)->store_name }}</p>
+                                                            <small class="text-muted mb-0">{{ optional($top_store->vendor)->location }}</small>
                                                         </div>
                                                     </div>
                                                     <div class="text-muted text-small">
@@ -238,6 +239,7 @@
                                                 </div>
                                             @endforeach
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>

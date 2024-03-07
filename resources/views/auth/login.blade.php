@@ -11,7 +11,7 @@
                             $data = App\Models\Setting::pluck('value','key');
                         @endphp
                         <div class="brand-logo">
-                            <img src="{{ url(config('app.logo')).'/'.$data['logo_1'] }}" alt="logo">
+                            <img class="img_logo" src="{{ url(config('app.logo')).'/'.$data['logo_1'] }}" alt="logo">
                         </div>
                         <h6 class="fw-light">Sign in to continue.</h6>
                         <form class="pt-3" id="basic-form" method="POST" action="{{ route('login') }}">

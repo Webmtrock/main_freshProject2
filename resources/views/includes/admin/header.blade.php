@@ -10,7 +10,7 @@
         @endphp
         <div>
             <a class="navbar-brand brand-logo" href="{{ route('admin.dashboard') }}">
-                <img src="{{ url(config('app.logo')).'/'.$data['logo_1'] }}" alt="logo" />
+                <img  src="{{ url(config('app.logo')).'/'.$data['logo_1'] }}" alt="logo" />
             </a>
             <a class="navbar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}">
                 <img src="{{ url(config('app.logo')).'/'.$data['logo_2'] }}" alt="logo" />
